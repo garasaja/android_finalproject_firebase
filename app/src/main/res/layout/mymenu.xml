@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar1" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:background="#000000">
+
+            <Button
+                android:id="@+id/btn_mymenu_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="로그인이 필요합니다."
+                android:background="@android:color/black"
+                android:textColor="@android:color/white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/mymenu_likestore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:text="찜한카페"
+                android:textSize="30sp"
+                android:gravity="left"
+                android:layout_marginLeft="20dp"/>
+
+            <Button
+                android:id="@+id/mymenu_liketheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:text="찜한테마"
+                android:textSize="30sp"
+                android:gravity="left"
+                android:layout_marginLeft="20dp"/>
+
+<!--            <Button-->
+<!--                android:id="@+id/mymenu_reservelist"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@android:color/white"-->
+<!--                android:text="예약내역"-->
+<!--                android:textSize="30sp"-->
+<!--                android:gravity="left"-->
+<!--                android:layout_marginLeft="20dp"/>-->
+
+<!--            <Button-->
+<!--                android:id="@+id/mymenu_notice"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@android:color/white"-->
+<!--                android:text="공지사항"-->
+<!--                android:textSize="30sp"-->
+<!--                android:gravity="left"-->
+<!--                android:layout_marginLeft="20dp"/>-->
+
+            <Button
+                android:id="@+id/mymenu_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:text="문의하기"
+                android:textSize="30sp"
+                android:gravity="left"
+                android:layout_marginLeft="20dp"/>
+
+            <Button
+                android:id="@+id/mymenu_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:text="로그아웃"
+                android:gravity="left"
+                android:textSize="30sp"
+                android:layout_marginLeft="20dp"/>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

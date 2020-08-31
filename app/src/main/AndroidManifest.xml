@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pproject">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <application
+
+        android:requestLegacyExternalStorage="true"
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data android:name="android.max_aspect" android:value="2.1" />
+        <activity android:name=".view.DetailStoreActivity"/>
+        <activity android:name=".view.DetailThemeActivity"/>
+        <activity android:name=".view.ReserveListActivity"/>
+        <activity android:name=".view.QuestionActivity"/>
+        <activity android:name=".view.LikeThemeActivity"/>
+        <activity android:name=".view.LikeStoreActivity"/>
+        <activity android:name=".view.NoticeActivity"/>
+        <activity android:name=".view.SettingActivity"/>
+        <activity android:name=".view.CalendarActivity"/>
+        <activity android:name=".view.MainActivity"/>
+        <activity android:name=".view.JoinActivity"/>
+        <activity android:name=".view.LoginActivity"/>
+
+        <activity android:name=".view.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data android:name="com.kakao.sdk.AppKey" android:value="cf59601ff0d39885326f5d0266f38df0"/>
+
+<!--        <meta-data android:name="android.max_aspect"-->
+<!--            android:value="ratio_float"/>-->
+    </application>
+
+</manifest>
