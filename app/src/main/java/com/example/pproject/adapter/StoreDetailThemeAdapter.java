@@ -1,6 +1,7 @@
 package com.example.pproject.adapter;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +26,7 @@ import java.util.List;
 public class StoreDetailThemeAdapter extends RecyclerView.Adapter<StoreDetailThemeAdapter.MyViewHolder> {
     private static final String TAG = "StoreDetailThemeAdapter";
     private List<ThemeRespDto> themeRespDtos = new ArrayList<>();
+    private List<Theme> themeList = new ArrayList<>();
     private DetailStoreActivity detailStoreActivity;
 
     public StoreDetailThemeAdapter() {
@@ -57,7 +59,9 @@ public class StoreDetailThemeAdapter extends RecyclerView.Adapter<StoreDetailThe
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         ThemeRespDto themeRespDto = themeRespDtos.get(position);
+//        Theme theme = themeList.get(position);
         holder.setThemeRespDto(themeRespDto);
+   //     holder.setTheme(theme);
         holder.storeDetailThemePoint.setText(Float.toString(themeRespDto.getRating()));
         holder.storeDetailThemeTitle.setText(themeRespDto.getName());
         Picasso.get().load(themeRespDto.getThemeImg()).into(holder.storeDetailThemeImage);
@@ -78,9 +82,13 @@ public class StoreDetailThemeAdapter extends RecyclerView.Adapter<StoreDetailThe
         private ThemeRespDto themeRespDto;
         private ImageView storeDetailThemeImage;
         private TextView storeDetailThemePoint, storeDetailThemelevel , storeDetailThemeTitle;
+        private Theme theme;
 
         public void setThemeRespDto(ThemeRespDto themeRespDto) {
             this.themeRespDto = themeRespDto;
+        }
+        public void setTheme(Theme theme) {
+            this.theme = theme;
         }
 
         public MyViewHolder(final View itemView) {
@@ -95,7 +103,8 @@ public class StoreDetailThemeAdapter extends RecyclerView.Adapter<StoreDetailThe
 //                @Override
 //                public void onClick(View v) {
 //                    Intent intent = new Intent(itemView.getContext(), DetailThemeActivity.class);
-//
+//                    intent.putExtra("themeId",themeRespDto.getTheme().getId());
+//                    Log.d(TAG, "onClick: themeId : " + themeRespDto.getTheme().getId());
 //                    v.getContext().startActivity(intent);
 //                }
 //            });

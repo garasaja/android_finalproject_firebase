@@ -106,6 +106,7 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.MyViewHolder
                     Log.d(TAG, "onClick: storeId : " + store);
                     intent.putExtra("storeId", store.getId());
                     intent.putExtra("homepage",store.getHomepage());
+                    Log.d(TAG, "onClick: 홈페이지는 ? " + store.getHomepage());
                     v.getContext().startActivity(intent);
                 }
             });

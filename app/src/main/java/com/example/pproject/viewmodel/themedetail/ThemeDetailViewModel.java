@@ -25,6 +25,8 @@ public class ThemeDetailViewModel extends AndroidViewModel {
         themeDetailRepository.getTheme(id);
     }
 
+
+
     public LiveData<ThemeDetailRespDto> subscribe() {
         return liveData;
     }

@@ -22,6 +22,8 @@ import com.example.pproject.R;
 import com.example.pproject.model.Theme;
 import com.example.pproject.model.dto.IndexRespDto;
 import com.example.pproject.viewmodel.home.HomeViewModel;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
 
@@ -35,6 +37,8 @@ public class HomeFragment extends Fragment {
     private HomeThemeAdapter homeThemeAdapter;
     private CarouselView carouselView;
     private HomeViewModel homeViewModel3;
+    private FirebaseDatabase database;
+    private DatabaseReference databaseReference;
 
     private int[] carrouselImage = {R.drawable.main1, R.drawable.main2, R.drawable.main3};
 
@@ -70,13 +74,20 @@ public class HomeFragment extends Fragment {
     }
 
     private void adapter() {
+
+   //     database = FirebaseDatabase.getInstance();
+
         homeStoreAdapter = new HomeStoreAdapter();
+        rvHomeStore.setHasFixedSize(true);
         rvHomeStore.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
         rvHomeStore.setAdapter(homeStoreAdapter);
         homeStoreAdapter.addItems(new ArrayList<Store>());
 
+//        database.getReference("User");
+
 
         homeThemeAdapter = new HomeThemeAdapter();
+        rvHometheme.setHasFixedSize(true);
         rvHometheme.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
         rvHometheme.setAdapter(homeThemeAdapter);
         homeThemeAdapter.addItems(new ArrayList<Theme>());

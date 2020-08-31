@@ -61,7 +61,7 @@ public class DetailStoreActivity extends AppCompatActivity {
         btnReserve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "onClick: " + homepageurl);
+                Log.d(TAG, "onClick: url은?" + homepageurl);
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(homepageurl));
 //                Intent intent = new Intent(DetailStoreActivity.this, CalendarActivity.class);
                 startActivity(intent);
@@ -74,6 +74,7 @@ public class DetailStoreActivity extends AppCompatActivity {
         Intent intent = getIntent();
         storeId =  intent.getIntExtra("storeId",0);
         homepageurl = intent.getStringExtra("homepage");
+        Log.d(TAG, "object: object 홈페이지 url은 ? " + homepageurl);
         Log.d(TAG, "onCreate: storeid : " + storeId);
         // storeDetailTitle.setText(Integer.toString(getIntent().getIntExtra("storeId",0)));
 
